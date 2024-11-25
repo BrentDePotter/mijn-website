@@ -23,3 +23,27 @@
 .navbar1 a:hover {
     color: #81C7BC;
 }
+
+.doos {
+    border: 2px solid #FF0763;
+    border-radius: 10px;
+    background-color: #143447;
+    padding: 20px;
+    margin-bottom: 30px;
+    color: #81C7BC;
+}
+
+h1{
+    font-family: "Pixelify Sans", sans-serif;
+    color: #FF0763;
+}
+
+h2{
+    font-family: "Pixelify Sans", sans-serif;
+    color: #FF0763;
+}
+
+h3{
+    font-family: "Pixelify Sans", sans-serif;
+    color: #FF0763;
+}
