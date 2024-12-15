@@ -23,6 +23,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+    <!-- LEAFLET -->
+  <!-- voeg het leaflet css-bestand toe om de kaart van standaard opmaak te voorzien -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <!-- voeg het mapStyle.css bestand toe. Hierin zetten we alle css specifiek voor de kaart -->
+  <link rel="stylesheet" href="css/map.css">
+  <!-- voeg de leaflet.js javascript toe aan de pagina en check de integriteit ervan -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- voeg JavaScript-bestanden toe aan de pagina en laad het als de pagina geladen is (gebruik het woord "defer"). -->
+  <script src="js/map.js" defer></script>
 </head>
 
 <body class="p-3 m-0 border-0 bd-example" style="background-color: #143447;">
@@ -50,25 +63,58 @@
   <main>
     <article>
       <br>
-        <img src="assets/images/da6cd56796ac98b7b5bb431662a48c65.png" style="display: block; margin-left: auto; margin-right: auto; max-width: 100%; height: auto;" >
+        <img src="assets/images/ContactPixel.png" style="display: block; margin-left: auto; margin-right: auto; max-width: 100%; height: auto;" >
         <br>
-        <img src="assets/images/Bre-upskale.jpg" style="display: block; margin-left: auto; margin-right: auto; max-width: 40%; height: auto; border: 5px solid #FF0763; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3); border-radius: 10px;" >
+        <figure><img src="assets/images/BrentDP.jpg" style="display: block; margin-left: auto; margin-right: auto; max-width: 40%; height: auto; border: 5px solid #FF0763; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3); border-radius: 10px;" ><figcaption>Brent De Potter</figcaption></figure>
+        <br>
         <div class="container mt-4">
             <div class="row">
                 <div class="col-12 col-lg-6">
                     <div class="logo-text-container">
                         
-                        <p  style="color: #81C7BC; font-size: 24px;"> <img src="assets/images/pngwing.com (1).png" alt="Logo telefoon" style="height: 100px;"> +32 475 27 22 98</p>
+                        <p  style="color: #81C7BC; font-size: 24px;"> <img src="assets/images/PhoneLogo.png" alt="Logo telefoon" style="height: 100px;"> +32 475 27 22 98</p>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
                     <div class="logo-text-container">
-                        <p style="color: #81C7BC; font-size: 24px;"> <img src="assets/images/pngegg.png" alt="Logo e-mail" style="height: 100px;" > brentdepotter@gmail.com</p>
+                        <p style="color: #81C7BC; font-size: 24px;"> <img src="assets/images/EmailLogo.png" alt="Logo e-mail" style="height: 100px;" > brentdepotter@gmail.com</p>
                     </div>
                 </div>
             </div>
         </div>
+        <br>
+        <div id="Map"></div>
+    </article>
+    <article class="contact-page">
+      <div class="container d-flex justify-content-center align-items-center">
+        <div class="form-container">
+          <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+            <div class="mb-3">
+              <label for="name" class="form-label custom-label">Naam:</label>
+              <input type="text" class="form-control custom-input" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label custom-label">Email:</label>
+              <input type="email" class="form-control custom-input" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label custom-label">Onderwerp:</label>
+              <input type="text" class="form-control custom-input" id="subject" name="subject" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label custom-label">Bericht:</label>
+              <textarea class="form-control custom-input" rows="10" id="message" name="message" required></textarea>
+            </div>
+            <div class="mb-3">
+              <div data-netlify-recaptcha="true"></div>
+            </div>
+            <button type="submit" class="btn custom-button">Submit</button>
+          </form>
+        </div>
     </article>
   </main>
 </body>
+<footer style="text-align: center; padding: 10px; background-color: #143447; color: #FF0763;">
+  &copy; 2024 Brent De Potter
+</footer>
 </html>
